@@ -82,12 +82,12 @@ PRODUCT_PACKAGES += \
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
+    $(LOCAL_PATH)/configs/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     $(LOCAL_PATH)/configs/audio/audio_policy.conf:system/etc/audio_policy.conf
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    bdAddrLoader
+    hwaddrs
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -176,10 +176,11 @@ PRODUCT_PACKAGES += \
     fstab.g3 \
     init.g3.rc \
     init.g3.usb.rc \
-    init.galbi.sensor.sh \
-    init.qcom.early_boot.sh \
+    init.msm8974.sensor.sh \
     init.qcom.sh \
+    init.qcom.bt.sh \
     init.baseband.sh \
+    init.sensors.sh \
     ueventd.g3.rc
 
 # RIL symbols
